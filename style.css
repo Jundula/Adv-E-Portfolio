@@ -375,7 +375,6 @@ nav {
   background-color: #242424;
   color: white;
   transform: translateX(110%);
-  text-align: center;
 }
 .modal__title {
   font-size: 26px;
@@ -401,6 +400,7 @@ nav {
   padding: 12px 24px;
   font-size: 20px;
   transition: all 330ms ease;
+  margin-top: 16px;
 }
 
 .form__submit:hover {
@@ -429,7 +429,7 @@ nav {
 }
 
 .modal__overlay--success {
-  background-color: #4bb5;
+  background-color: rgb(40, 126, 82);
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -674,6 +674,10 @@ footer {
   }
   .modal__half{
     padding: 40px 40px;
+  }
+  .modal__contact{
+  text-align: center;
+
   }
   .modal__title{
     text-align: center;

@@ -43,42 +43,32 @@ function toogleContrast(){
 // service_ldlc1n5
 // Edpgx-lz8iHxjN2i6
 
-// function contact(event){
-//     const loading = document.querySelector('.modal__overlay--loading');
-//     const success = document.querySelector('.modal__overlay--succes');
-//     loading.classList += " modal__overlay--visible";
-//  emailjs
-//     .sendForm(
-//         'service_ldlc1n5',
-//         'template_jlhn8zo',
-//         event,target,
-//         'Edpgx-lz8iHxjN2i6'
-
-//     ).then(() => {
-//         loading.classList.remove("modal__overlay--visible");
-//         success.classList += " modal__overlay--visible";
-        
-//     }).catch(() => {
-//         loading.classList.remove("modal__overlay--visible");
-//         alert(
-//             "The email service is temporarrily unavailable. Please contact me directly on my email@hotmail.com"
-//         );
-//     })
-// }
-function contact(event){
+function contact(event) {
     event.preventDefault();
-    const loading = document.querySelector('.modal__overlay--loading');
-    const success = document.querySelector('.modal__overlay--success');
+    const loading = document.querySelector(".modal__overlay--loading");
+    const success = document.querySelector(".modal__overlay--success");
     loading.classList += " modal__overlay--visible";
-    console.log('it worked')
+    emailjs
+      .sendForm(
+        "service_ldlc1n5",
+        "template_jlhn8zo",
+        event.target,
+        "Edpgx-lz8iHxjN2i6"
+      )
+      .then(() => {
+        loading.classList.remove("modal__overlay--visible");
+        success.classList += " modal__overlay--visible";
+      })
+      .catch(() => {
+        loading.classList.remove("modal__overlay--visible");
+        alert(
+          "The email service is temporarily unavailable. Please contact me directly on email@email.com"
+        );
+      });
+  }
+  
 
-    setTimeout(() => {
-         
-        console.log('it worked1')
-    }, 2000);
-    
-}
-
+  
 let isModalOpen = false;
 function toggleModal(){
     if (isModalOpen){
